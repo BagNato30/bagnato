@@ -1,0 +1,31 @@
+!DOCTYPE html>
+<html> 
+<head>
+  <title>Calcolo Montante</title>
+</head>
+<body>
+  <h2>Calcolo del Montante</h2>
+  <label>Capitale iniziale (C):</label>
+  <input id="capitale" type="text"><br>
+  <label>Tasso di interesse annuale (%):</label>
+  <input id="interesse" type="text"><br>
+  <label>Tempo (anni):</label>
+  <input id="tempo" type="text"><br><br>
+  <button onclick="calcolaMontante()">Calcola</button>
+  <p id="risultato"></p>
+  <script>
+    function calcolaMontante() {
+      // Prendi i valori dagli input
+      let C = parseFloat(document.getElementById("capitale").value);
+      let i = parseFloat(document.getElementById("interesse").value);
+      let t = parseFloat(document.getElementById("tempo").value);
+      // Calcolo del montante usando Math.pow
+      let M = C * Math.pow(1 + (i / 100), t);
+      // Mostra il risultato con 2 decimali
+      document.getElementById("risultato").textContent = 
+        "Montante dopo " + t + " anni: €" + M.toFixed(2);
+    }
+  </script>
+</body>
+</html>
+
