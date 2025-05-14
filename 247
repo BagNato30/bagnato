@@ -1,0 +1,21 @@
+input id="numero" type="text"> 
+<button onclick="mostraNumero()">Invia</button>
+<p id="output"></p>
+<script>
+  function mostraNumero() {
+    let valore = document.getElementById("numero").value;
+    document.getElementById("output").textContent = "Hai inserito: " + valore;
+  }
+</script>
+let a = 5;
+let b = 3;
+let somma = a + b;
+console.log("Risultato:", somma);
+let stringa = "42";
+let numero = Number(stringa); // oppure
+let num = 42;
+let str = num.toString();
+let numero = 5 / 3;
+let decimale = numero.toFixed(2); // "1.
+let numDecimale = parseFloat(decimale); //
+
